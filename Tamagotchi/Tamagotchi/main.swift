@@ -7,20 +7,59 @@
 //
 
 import Foundation
-
-class tamaGotchi {
-  var name: String?
-  var colour: String?
-  var ownerName: String?
-  var health = 100
-  var weight = 100
-  var numberOfPoos = 0
-  var age = 0
+    
+class TamagotchiGame {
+    
+    var tamagotchi = Tamagotchi(name: "Pan", colour: "Yellow", ownerName: "Karl")
+    
+    var quit = true
+    
+    repeat {
+        print("""
+            Choose an option:
+                1. Feed Snack
+                2. Feed Meal
+                3. Play Game
+                4. Terminate Tamagotchi
+        """)
+        if let choice = readLine() {
+            
+        
+        
+        
+        }
+    } while quit == false
+    
 }
 
-let myTamagotchi = tamaGotchi()
+    
+    
+    
 
-myTamagotchi.name = "bob"
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
 
-print(myTamagotchi.name)
+
+
+
+
 
