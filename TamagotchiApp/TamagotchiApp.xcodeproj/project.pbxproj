@@ -15,6 +15,7 @@
 		9B91D0F323CDE9F100F59C08 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9B91D0F123CDE9F100F59C08 /* LaunchScreen.storyboard */; };
 		9B91D0FE23CDE9F100F59C08 /* TamagotchiAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B91D0FD23CDE9F100F59C08 /* TamagotchiAppTests.swift */; };
 		9B91D10923CDE9F100F59C08 /* TamagotchiAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B91D10823CDE9F100F59C08 /* TamagotchiAppUITests.swift */; };
+		9B91D11723CDEB1200F59C08 /* Tamagotchi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B91D11623CDEB1200F59C08 /* Tamagotchi.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		9B91D10423CDE9F100F59C08 /* TamagotchiAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TamagotchiAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9B91D10823CDE9F100F59C08 /* TamagotchiAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TamagotchiAppUITests.swift; sourceTree = "<group>"; };
 		9B91D10A23CDE9F100F59C08 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9B91D11623CDEB1200F59C08 /* Tamagotchi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tamagotchi.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +108,7 @@
 				9B91D0EF23CDE9F100F59C08 /* Assets.xcassets */,
 				9B91D0F123CDE9F100F59C08 /* LaunchScreen.storyboard */,
 				9B91D0F423CDE9F100F59C08 /* Info.plist */,
+				9B91D11623CDEB1200F59C08 /* Tamagotchi.swift */,
 			);
 			path = TamagotchiApp;
 			sourceTree = "<group>";
@@ -259,6 +262,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9B91D11723CDEB1200F59C08 /* Tamagotchi.swift in Sources */,
 				9B91D0EB23CDE9F000F59C08 /* ViewController.swift in Sources */,
 				9B91D0E723CDE9F000F59C08 /* AppDelegate.swift in Sources */,
 				9B91D0E923CDE9F000F59C08 /* SceneDelegate.swift in Sources */,

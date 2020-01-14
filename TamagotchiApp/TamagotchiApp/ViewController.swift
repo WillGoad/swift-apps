@@ -9,12 +9,36 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    
+    
+    @IBOutlet var TamagotchiStatistics: UILabel!
+    
+    
+    
+    var tamagotchi = Tamagotchi(name: "Harry", colour: "Red", ownerName: "Will")
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        TamagotchiStatistics.text = tamagotchi.displayStats()
     }
+    
+    @IBAction func FeedMealButton(_ sender: Any) {
+        tamagotchi.feed("meal")
+        updateStats()
+    }
+    
 
-
+    @IBAction func FeedSnackButton(_ sender: Any) {
+        tamagotchi.feed("snack")
+        updateStats()
+    }
+    
+    
+    @IBAction func PlayGameButton(_ sender: Any) {
+    }
+    
+    func updateStats() {
+        TamagotchiStatistics.text = tamagotchi.displayStats()
+    }
 }
 
