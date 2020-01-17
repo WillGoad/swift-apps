@@ -33,6 +33,7 @@
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="WOX-0u-lOW">
                                 <rect key="frame" x="347" y="291" width="49" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <accessibility key="accessibilityConfiguration" identifier="engineSwitch"/>
                                 <connections>
                                     <action selector="engineAndExhaustToggle:" destination="BYZ-38-t0r" eventType="valueChanged" id="TW8-w9-a2M"/>
                                 </connections>
@@ -40,6 +41,7 @@
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Gbx-Sf-Uta">
                                 <rect key="frame" x="345" y="330" width="49" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <accessibility key="accessibilityConfiguration" identifier="tyresSwitch"/>
                                 <connections>
                                     <action selector="tyresPackageToggle:" destination="BYZ-38-t0r" eventType="valueChanged" id="O67-4I-Bbs"/>
                                 </connections>
@@ -47,6 +49,7 @@
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="VvZ-to-GtI">
                                 <rect key="frame" x="345" y="412" width="49" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <accessibility key="accessibilityConfiguration" identifier="washSwitch"/>
                                 <connections>
                                     <action selector="washPackageToggle:" destination="BYZ-38-t0r" eventType="valueChanged" id="yT8-FW-Hoh"/>
                                 </connections>
@@ -89,6 +92,7 @@
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="5Lz-Aw-iVk">
                                 <rect key="frame" x="345" y="369" width="49" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <accessibility key="accessibilityConfiguration" identifier="electricSwitch"/>
                                 <connections>
                                     <action selector="electricPackageToggle:" destination="BYZ-38-t0r" eventType="valueChanged" id="b05-2J-cef"/>
                                 </connections>

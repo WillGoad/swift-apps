@@ -3,7 +3,7 @@
 //  CarCustomiserUITests
 //
 //  Created by Goad, William (PAH) on 11/01/2020.
-//  Copyright © 2020 Goad, William (PAH). All rights reserved.
+//  Copyr/Users/goad.w/Documents/swift-apps/CarCustomiser/CarCustomiser/CarCustomiserUITestsight © 2020 Goad, William (PAH). All rights reserved.
 //
 
 import XCTest
@@ -31,7 +31,21 @@ class CarCustomiserUITests: XCTestCase {
         // Use recording to get started writing UI tests.
         // Use XCTAssert and related functions to verify your tests produce the correct results.
     }
-
+    
+    func testWhenBoughtExhaustAndTyresPackagesEcuAndDriveTrainPackagesAreDisabled() {
+        // UI tests must launch the application that they test.
+        let app = XCUIApplication()
+        app.launch()
+        
+        //act
+        app.switches["tyresSwitch"].tap()
+        app.switches["engineSwitch"].tap()
+        
+        //assert
+        XCTAssertEqual(app.switches["electricSwitch"].isEnabled, false)
+        XCTAssertEqual(app.switches["washSwitch"].isEnabled, false)
+    }
+    
     func testLaunchPerformance() {
         if #available(macOS 10.15, iOS 13.0, tvOS 13.0, *) {
             // This measures how long it takes to launch your application.

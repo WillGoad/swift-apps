@@ -35,6 +35,8 @@ class ViewController: UIViewController {
     
     
     @IBAction func PlayGameButton(_ sender: Any) {
+        tamagotchi.playGame()
+        updateStats()
     }
     
     func updateStats() {
