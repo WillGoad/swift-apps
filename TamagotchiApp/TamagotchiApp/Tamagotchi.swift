@@ -18,6 +18,12 @@ class Tamagotchi {
     var happiness = 3
     var numberOfPoos = 0
     var age = 0
+    
+    var isIll = false
+    
+    let secondsPerYear = 30
+    let maxAge = 20
+    
  
     init(name: String, colour: String, ownerName: String) {
         self.name = name
@@ -54,7 +60,14 @@ class Tamagotchi {
         Happiness: \(happiness)
         Number of Poos: \(numberOfPoos)
         Age: \(age)
+        Is Ill? \(isIll)
         """
     }
+    
+    func incrAge() {
+        age += 1
+    }
+    
+    
 
 }
