@@ -46,6 +46,51 @@ class CarCustomiserUITests: XCTestCase {
         XCTAssertEqual(app.switches["washSwitch"].isEnabled, false)
     }
     
+//    func testStatsDisplayedOnLaunch() {
+//        // UI tests must launch the application that they test.
+//        let app = XCUIApplication()
+//        app.launch()
+//
+//        //assert
+//        XCTAssertEqual(app.staticTexts["carStats"].textViews, """
+//        Make: Volkswagen
+//        Model: Golf GTI
+//        Top Speed: 135
+//        Acceleration: 8.1
+//        Handling: 4
+//        """)
+//
+//    }
+    
+//    func testButtonsAreReenabledAndSetToOffWhenCycleToNextCar() {
+//        // UI tests must launch the application that they test.
+//        let app = XCUIApplication()
+//        app.launch()
+//
+//        //act
+//        app.buttons["cycleCarsButton"].tap()
+//
+//        //assert
+//        XCTAssertEqual(app.switches["engineSwitch"].isEnabled, true)
+//        XCTAssertEqual(app.switches["tyresSwitch"].isEnabled, true)
+//        XCTAssertEqual(app.switches["electricSwitch"].isEnabled, true)
+//        XCTAssertEqual(app.switches["washSwitch"].isEnabled, true)
+//
+//    }
+    
+//    func testRemainingFundsDecreasesByFiveHundredWhenEngineAndExhaustPackagePurchased() {
+//        // UI tests must launch the application that they test.
+//        let app = XCUIApplication()
+//        app.launch()
+//        
+//        //act
+//        app.switches["engineSwitch"].tap()
+//        
+//        //assert
+//        XCTAssertEqual(app.switches["electricSwitch"].isEnabled, false)
+//        XCTAssertEqual(app.switches["washSwitch"].isEnabled, false)
+//    }
+    
     func testLaunchPerformance() {
         if #available(macOS 10.15, iOS 13.0, tvOS 13.0, *) {
             // This measures how long it takes to launch your application.

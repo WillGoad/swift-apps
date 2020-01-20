@@ -14,11 +14,12 @@ class ViewController: UIViewController {
     @IBOutlet var tyresPackage: UISwitch!
     @IBOutlet var electricPackage: UISwitch!
     @IBOutlet var washPackage: UISwitch!
-    
     @IBOutlet weak var CarStatistics: UILabel!
-
     @IBOutlet var remainingFundsDisplay: UILabel!
+    @IBOutlet var timeRemainingDisplay: UILabel!
     
+    @IBOutlet var cycleCarsButton: UIButton!
+    var timeRemaining = 30
     var remainingFunds = 0 {
         didSet {
             remainingFundsDisplay.text = "Remaining Funds: \(remainingFunds)"
@@ -56,6 +57,8 @@ class ViewController: UIViewController {
             CarStatistics.text = car?.displayStats()
         }
     }
+    
+    var timer: Timer?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -64,6 +67,7 @@ class ViewController: UIViewController {
         print(carIndexPointer)
         CarStatistics.text = car?.displayStats()
         remainingFunds = 1000
+        timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(countdown), userInfo: nil, repeats: true)
     }
     
     @IBAction func cycleCar(_ sender: Any) {
@@ -119,6 +123,20 @@ class ViewController: UIViewController {
 
     }
     
+    @objc func countdown() {
+        if timeRemaining > 0 {
+            timeRemainingDisplay?.text = "Time Remaining: \(timeRemaining)"
+            timeRemaining -= 1
+            
+        } else {
+            engineAndExhaustPackage.isEnabled = false
+            electricPackage.isEnabled = false
+            washPackage.isEnabled = false
+            tyresPackage.isEnabled = false
+            cycleCarsButton.isEnabled = false
+            timer?.invalidate()
+        }
+    }
     
 }
 
