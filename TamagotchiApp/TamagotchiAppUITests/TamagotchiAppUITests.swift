@@ -31,7 +31,6 @@ class TamagotchiAppUITests: XCTestCase {
         //act
         //app.buttons['feedSnackButton'].tap()
         
-        
         //assert
         
         // Use recording to get started writing UI tests.

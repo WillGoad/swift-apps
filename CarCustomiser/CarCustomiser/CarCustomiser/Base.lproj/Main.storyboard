@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina5_5" orientation="portrait" appearance="light"/>
+    <device id="retina5_9" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -12,76 +12,76 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="CarCustomiser" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="WOX-0u-lOW">
-                                <rect key="frame" x="355" y="141.66666666666666" width="51" height="31"/>
+                                <rect key="frame" x="316" y="185.66666666666666" width="51" height="31"/>
                                 <accessibility key="accessibilityConfiguration" identifier="engineSwitch"/>
                                 <connections>
                                     <action selector="engineAndExhaustToggle:" destination="BYZ-38-t0r" eventType="valueChanged" id="TW8-w9-a2M"/>
                                 </connections>
                             </switch>
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Gbx-Sf-Uta">
-                                <rect key="frame" x="355" y="193.66666666666666" width="51" height="31"/>
+                                <rect key="frame" x="316" y="237.66666666666666" width="51" height="30.999999999999972"/>
                                 <accessibility key="accessibilityConfiguration" identifier="tyresSwitch"/>
                                 <connections>
                                     <action selector="tyresPackageToggle:" destination="BYZ-38-t0r" eventType="valueChanged" id="O67-4I-Bbs"/>
                                 </connections>
                             </switch>
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="VvZ-to-GtI">
-                                <rect key="frame" x="355" y="297.66666666666669" width="51" height="31"/>
+                                <rect key="frame" x="316" y="341.66666666666669" width="51" height="31"/>
                                 <accessibility key="accessibilityConfiguration" identifier="washSwitch"/>
                                 <connections>
                                     <action selector="washPackageToggle:" destination="BYZ-38-t0r" eventType="valueChanged" id="yT8-FW-Hoh"/>
                                 </connections>
                             </switch>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Engine and Exhaust Package (Cost: 500)" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Aqi-tb-XDz">
-                                <rect key="frame" x="10" y="121.33333333333333" width="311.66666666666669" height="20.333333333333329"/>
+                                <rect key="frame" x="10" y="165.33333333333334" width="311.66666666666669" height="20.333333333333343"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tyres Package (Cost: 500)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ySK-n7-29a">
-                                <rect key="frame" x="10" y="172.66666666666666" width="203.66666666666666" height="21"/>
+                                <rect key="frame" x="10" y="216.66666666666666" width="203.66666666666666" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Wash Package (Cost: 200)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jx3-mx-BAM">
-                                <rect key="frame" x="10" y="276.66666666666669" width="204" height="21"/>
+                                <rect key="frame" x="10" y="320.66666666666669" width="204" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Electrification Package (Cost: 200)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YCl-Th-0O5">
-                                <rect key="frame" x="10" y="224.66666666666666" width="266" height="21"/>
+                                <rect key="frame" x="10" y="268.66666666666669" width="266" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="5Lz-Aw-iVk">
-                                <rect key="frame" x="355" y="245.66666666666663" width="51" height="31"/>
+                                <rect key="frame" x="316" y="289.66666666666669" width="51" height="31"/>
                                 <accessibility key="accessibilityConfiguration" identifier="electricSwitch"/>
                                 <connections>
                                     <action selector="electricPackageToggle:" destination="BYZ-38-t0r" eventType="valueChanged" id="b05-2J-cef"/>
                                 </connections>
                             </switch>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Time Remaining: 30" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4aL-fi-ha5">
-                                <rect key="frame" x="252" y="10" width="152" height="21"/>
+                                <rect key="frame" x="213" y="54" width="152" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Selected Car Statistics" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gU6-zy-3rI">
-                                <rect key="frame" x="120.33333333333333" y="41" width="173.66666666666669" height="20.333333333333329"/>
+                                <rect key="frame" x="100.66666666666667" y="85" width="173.66666666666663" height="20.333333333333329"/>
                                 <accessibility key="accessibilityConfiguration" identifier="carStats"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="q7B-re-sTT">
-                                <rect key="frame" x="120.33333333333331" y="71.333333333333329" width="74" height="30"/>
+                                <rect key="frame" x="100.66666666666669" y="115.33333333333331" width="74" height="30"/>
                                 <accessibility key="accessibilityConfiguration" identifier="cycleCarsButtons"/>
                                 <state key="normal" title="Cycle Cars"/>
                                 <connections>
@@ -89,7 +89,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Remaining Funds" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oSx-55-s9O">
-                                <rect key="frame" x="10" y="10" width="131.66666666666666" height="21"/>
+                                <rect key="frame" x="10" y="54" width="131.66666666666666" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>

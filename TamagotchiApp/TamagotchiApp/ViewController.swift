@@ -16,7 +16,7 @@ class ViewController: UIViewController {
     
     
     var tamagotchi = Tamagotchi(name: "Harry", colour: "Red", ownerName: "Will")
-    var timeRemaining = 30
+    var timeRemaining = 5
     var timePoo = 8
     var timer: Timer?
     
@@ -24,6 +24,8 @@ class ViewController: UIViewController {
     @IBOutlet var feedMeal: UIButton!
     @IBOutlet var feedSnack: UIButton!
     @IBOutlet var playGame: UIButton!
+    @IBOutlet var cleanUp: UIButton!
+    @IBOutlet var feedMedicine: UIButton!
     
     
     
@@ -66,6 +68,23 @@ class ViewController: UIViewController {
         updateStats()
     }
     
+    @IBAction func cleanUpButton(_ sender: Any) {
+        if tamagotchi.numberOfPoos > 0 {
+            tamagotchi.numberOfPoos -= 1
+        }
+        
+    }
+    
+    @IBAction func feedMedicineButton(_ sender: Any) {
+        if tamagotchi.health <= 5 {
+            tamagotchi.health += 1
+        }
+        
+    }
+    
+    
+    
+    
     func updateStats() {
         TamagotchiStatistics.text = tamagotchi.displayStats()
     }
@@ -74,15 +93,45 @@ class ViewController: UIViewController {
         if tamagotchi.age < tamagotchi.maxAge {
             tamagotchi.incrAge()
             updateStats()
+            if tamagotchi.isIll == true {
+                tamagotchi.health -= 1
+                if tamagotchi.health <= 0 {
+                    tamagotchiDie(of: "Ran out of health")
+                }
+                tamagotchi.weight -= 40
+                if tamagotchi.weight <= 0 {
+                    tamagotchiDie(of: "Wasted Away")
+                }
+                tamagotchi.happiness -= 1
+                if tamagotchi.hunger >= 0 {
+                    tamagotchi.hunger -= 1
+                }
+            } else {
+                tamagotchi.weight -= 20
+                if tamagotchi.weight <= 0 {
+                    tamagotchiDie(of: "Wasted Away")
+                }
+                tamagotchi.happiness += 1
+                tamagotchi.hunger += 1
+            }
+            if tamagotchi.health >= 10 {
+                
+            }
         } else {
             tamagotchiDie(of: "Old Age")
+            timer?.invalidate()
         }
     }
     
     func tamagotchiPoo() {
         tamagotchi.numberOfPoos += 1
-        if tamagotchi.numberOfPoos >= 2 {
-            //Deciding how to make kt wokr
+        if tamagotchi.numberOfPoos >= 12 {
+            tamagotchi.isIll = true
+            if tamagotchi.happiness - 5 >= 0 {
+                tamagotchi.happiness -= 5
+            }
+
+            updateStats()
         }
         
         
@@ -104,6 +153,8 @@ class ViewController: UIViewController {
         feedMeal.isEnabled = false
         feedSnack.isEnabled = false
         playGame.isEnabled = false
+        feedMedicine.isEnabled = false
+        cleanUp.isEnabled = false
     }
 }
 

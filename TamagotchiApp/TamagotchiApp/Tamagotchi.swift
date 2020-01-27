@@ -21,8 +21,8 @@ class Tamagotchi {
     
     var isIll = false
     
-    let secondsPerYear = 30
-    let maxAge = 20
+    let secondsPerYear = 5
+    let maxAge = 30
     
  
     init(name: String, colour: String, ownerName: String) {
