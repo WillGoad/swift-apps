@@ -15,6 +15,7 @@
 		9BC4AE6B23E05B3700BEEB91 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9BC4AE6923E05B3700BEEB91 /* LaunchScreen.storyboard */; };
 		9BC4AE7623E05B3700BEEB91 /* DataStructureVisualisationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BC4AE7523E05B3700BEEB91 /* DataStructureVisualisationTests.swift */; };
 		9BC4AE8123E05B3700BEEB91 /* DataStructureVisualisationUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BC4AE8023E05B3700BEEB91 /* DataStructureVisualisationUITests.swift */; };
+		9BC4AE8F23E05BC300BEEB91 /* Stack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BC4AE8E23E05BC300BEEB91 /* Stack.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		9BC4AE7C23E05B3700BEEB91 /* DataStructureVisualisationUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DataStructureVisualisationUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9BC4AE8023E05B3700BEEB91 /* DataStructureVisualisationUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataStructureVisualisationUITests.swift; sourceTree = "<group>"; };
 		9BC4AE8223E05B3700BEEB91 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9BC4AE8E23E05BC300BEEB91 /* Stack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stack.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +108,7 @@
 				9BC4AE6723E05B3700BEEB91 /* Assets.xcassets */,
 				9BC4AE6923E05B3700BEEB91 /* LaunchScreen.storyboard */,
 				9BC4AE6C23E05B3700BEEB91 /* Info.plist */,
+				9BC4AE8E23E05BC300BEEB91 /* Stack.swift */,
 			);
 			path = DataStructureVisualisation;
 			sourceTree = "<group>";
@@ -259,6 +262,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9BC4AE8F23E05BC300BEEB91 /* Stack.swift in Sources */,
 				9BC4AE6323E05B3600BEEB91 /* ViewController.swift in Sources */,
 				9BC4AE5F23E05B3600BEEB91 /* AppDelegate.swift in Sources */,
 				9BC4AE6123E05B3600BEEB91 /* SceneDelegate.swift in Sources */,
