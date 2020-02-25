@@ -8,18 +8,15 @@
 
 import UIKit
 
-class ViewController: UITableViewController {
+class HomeViewController: UITableViewController {
     
     var divisions: [Division] = []
     var currentDate: Date = Date()
 
-
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         addDummyData()
-        main()
         
         updateDateDisplay()
     }
@@ -37,12 +34,21 @@ class ViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        guard let vc = storyboard?.instantiateViewController(identifier: "DivisionAbsenceViewController")
-            as? DivisionAbsenceViewController else {
-                fatalError("Failed to load Division View Controller from storyboard")
+
+        let selectedDivision = divisions[indexPath.row]
+
+        var absence = Absence(date: currentDate)
+        if let existingAbsence = selectedDivision.getAbsence(for: currentDate) {
+            absence = existingAbsence
+        } else {
+            selectedDivision.absences.append(absence)
         }
         
-        vc.division = divisions[indexPath.row]
+        guard let vc = storyboard?.instantiateViewController(identifier: "DivisionAbsenceViewController", creator: { coder in
+            return DivisionAbsenceViewController(coder: coder, division: selectedDivision, absence: absence)
+        }) else {
+            fatalError("Failed to load Division View Controller from storyboard")
+        }
         
         navigationController?.pushViewController(vc, animated: true)
     }
@@ -58,15 +64,7 @@ class ViewController: UITableViewController {
     
     
     
-    func main() {
-        for div in divisions {
-            print(div.code)
-            print(div.students.count)
-            for stud in div.students {
-                print(stud.forename)
-            }
-        }
-    }
+
     
     
     @IBAction func nextDay(_ sender: Any) {
