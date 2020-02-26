@@ -62,8 +62,19 @@ class HomeViewController: UITableViewController {
         divisions.append(DivisionFactory.createDivision(code: "BY-5", of: 10))
     }
     
-    
-    
+    override func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+        let allPresent = UIContextualAction(style: .normal, title: "All Present") { action, view,
+            completionHandler in
+            let division = self.divisions[indexPath.row]
+            let absence = Absence(date: self.currentDate, present: division.students)
+            division.absences.append(absence)
+            tableView.reloadData()
+            completionHandler(true)
+        }
+
+        allPresent.backgroundColor = UIColor.blue
+        return UISwipeActionsConfiguration(actions: [allPresent])
+    }
 
     
     

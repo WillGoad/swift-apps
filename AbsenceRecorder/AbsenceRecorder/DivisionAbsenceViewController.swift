@@ -60,12 +60,8 @@ class DivisionAbsenceViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
         let selectedStudent = division.students[indexPath.row]
         absence.present.removeAll {
-            $0.forename == selectedStudent.forename && $0.surname == selectedStudent.surname
+            $0 == selectedStudent
             }
-    }
-    
-    override func viewDidDisappear(_ animated: Bool) {
-        absence.selectedRows = tableView.indexPathsForSelectedRows
     }
 
 }
