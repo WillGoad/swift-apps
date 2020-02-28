@@ -10,21 +10,35 @@ import UIKit
 
 class ShareScreenViewController: UIViewController {
 
+    var content: String
+    
+    
+    @IBOutlet var resultBox: UITextView!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        resultBox.text = content
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    init?(coder: NSCoder, content: String) {
+        self.content = content
+        
+        super.init(coder: coder)
+        
+        
     }
-    */
-
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
+    @IBAction func copyButton(_ sender: Any) {
+    }
+    
+    @IBAction func emailButton(_ sender: Any) {
+    }
+    
+    
 }

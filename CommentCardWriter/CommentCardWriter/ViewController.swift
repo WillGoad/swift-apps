@@ -44,10 +44,17 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
     }
 
     @IBAction func submit(_ sender: Any) {
-        let finishedComment = CommentGenerator.generate(subject: subject.selectedRow(inComponent: 0), levelOfEnjoyment: enjoy.selectedSegmentIndex, paceSatisfaction: pace.selectedSegmentIndex, weakness: weakness, strength: strength, additionalComments: additional?)
+        let finishedComment = CommentGenerator.generate(subject: subjects[subject.selectedRow(inComponent: 0)], levelOfEnjoyment: enjoy.selectedSegmentIndex, paceSatisfaction: pace.selectedSegmentIndex, weakness: weakness.text ?? "", strength: strength.text ?? "", additionalComments: additional?.text)
         
-        print(finishedComment)
+        print(finishedComment.content)
         
+        guard let vc = storyboard?.instantiateViewController(identifier: "ShareScreenViewController", creator: { coder in
+            return ShareScreenViewController(coder: coder, content: finishedComment.content)
+        }) else {
+            fatalError("Failed to load Share Screen ViewController from storyboard")
+        }
+        
+        navigationController?.pushViewController(vc, animated: true)
         
         
     }
