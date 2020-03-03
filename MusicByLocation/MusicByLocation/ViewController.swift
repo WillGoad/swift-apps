@@ -21,6 +21,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
         super.viewDidLoad()
         locationManager.requestWhenInUseAuthorization()
         locationManager.delegate = self
+        getArtists()
     }
 
     @IBAction func findMusic(_ sender: Any) {
@@ -52,6 +53,23 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
     func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
         musicRecommendations.text = "Could not access user's location. Error: \(error.localizedDescription)"
     }
+    
+    func getArtists() -> String {
+        guard let url = URL(string: "https://itunes.apple.com/search?term=Lionel%20Richie&entity=musicArtist") else {
+            print("Invalid URL")
+            return "Invalid URL - Wasn't able to search Itunes."
+        }
+        
+        let request = URLRequest(url: url)
+        URLSession.shared.dataTask(with: request) {(data,response,error) in
+            if let data = data {
+                print(String(decoding: data, as: UTF8.self))
+            }
+        }.resume()
+        
+        return ""
+    }
+    
     
 }
 

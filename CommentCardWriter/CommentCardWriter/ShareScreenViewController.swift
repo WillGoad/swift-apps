@@ -13,19 +13,26 @@ class ShareScreenViewController: UIViewController {
     var content: String
     
     
+    
     @IBOutlet var resultBox: UITextView!
+    
+    @IBOutlet var characterCountLabel: UILabel!
+    
+    
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
         resultBox.text = content
+        updateCharCount()
+        
     }
     
     init?(coder: NSCoder, content: String) {
         self.content = content
         
         super.init(coder: coder)
+        
         
         
     }
@@ -35,9 +42,26 @@ class ShareScreenViewController: UIViewController {
     }
     
     @IBAction func copyButton(_ sender: Any) {
+        let pasteboard = UIPasteboard.general
+        pasteboard.string = resultBox.text
     }
     
     @IBAction func emailButton(_ sender: Any) {
+    }
+    
+    func textViewDidEndEditing(_ resultBox: UITextView) {
+        updateCharCount()
+        print("It worked")
+    }
+    
+    func updateCharCount(){
+        let remaining = 400 - resultBox.text.count
+        if remaining < 20 {
+            characterCountLabel.textColor = UIColor.orange
+        } else if remaining < 0 {
+            characterCountLabel.textColor = UIColor.red
+        }
+        characterCountLabel.text = String(remaining)
     }
     
     
