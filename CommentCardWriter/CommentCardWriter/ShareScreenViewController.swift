@@ -7,8 +7,8 @@
 //
 
 import UIKit
-
-class ShareScreenViewController: UIViewController {
+//Use Photo on phone to do updating remaining count
+class ShareScreenViewController: UIViewController, UITextViewDelegate {
 
     var content: String
     
@@ -23,6 +23,7 @@ class ShareScreenViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        resultBox!.delegate = self
         resultBox.text = content
         updateCharCount()
         
@@ -41,34 +42,33 @@ class ShareScreenViewController: UIViewController {
         fatalError("init(coder:) has not been implemented")
     }
     
-    @IBAction func copyButton(_ sender: Any) {
-        let pasteboard = UIPasteboard.general
-        pasteboard.string = resultBox.text
-    }
     
-    @IBAction func emailButton(_ sender: Any) {
-    }
     
-    func textViewDidEndEditing(_ resultBox: UITextView) {
+
+    
+    func textViewDidChange(_ resultBox: UITextView) {
         updateCharCount()
         print("It worked")
     }
     
     func updateCharCount(){
         let remaining = 400 - resultBox.text.count
-        if remaining < 20 {
-            characterCountLabel.textColor = UIColor.orange
-        } else if remaining < 0 {
+        
+        if remaining < 0 {
             characterCountLabel.textColor = UIColor.red
+        } else if remaining <= 20 {
+            characterCountLabel.textColor = UIColor.orange
+        } else if remaining >= 0 {
+            characterCountLabel.textColor = UIColor.placeholderText
         }
         characterCountLabel.text = String(remaining)
     }
     
     @IBAction func ShareButton(_ sender: Any) {
-        var texttoshare = resultBox.text
-        var URLtoshare = NSURL(string: "https://google.com")
-        var objectsToShare:NSArray = [texttoshare, URLtoshare!]
-        var activityVC = UIActivityViewController(activityItems: objectsToShare as! [Any], applicationActivities: nil)
+        let texttoshare = resultBox.text
+        let URLtoshare = NSURL(string: "")
+        let objectsToShare:NSArray = [texttoshare ?? "", URLtoshare!]
+        let activityVC = UIActivityViewController(activityItems: objectsToShare as! [Any], applicationActivities: nil)
         self.present(activityVC, animated: true, completion: nil)
     }
     

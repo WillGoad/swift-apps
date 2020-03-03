@@ -171,31 +171,11 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Share" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EZB-fG-y1o">
-                                <rect key="frame" x="20" y="540" width="45" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fHf-Uz-g83">
-                                <rect key="frame" x="20" y="569" width="124" height="30"/>
-                                <state key="normal" title="Copy to Clipboard"/>
-                                <connections>
-                                    <action selector="copyButton:" destination="RPb-gD-QNP" eventType="touchUpInside" id="HOl-1s-xWU"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GyH-g1-gMf">
-                                <rect key="frame" x="20" y="604" width="37" height="30"/>
-                                <state key="normal" title="Email"/>
-                                <connections>
-                                    <action selector="emailButton:" destination="RPb-gD-QNP" eventType="touchUpInside" id="GqA-cr-VYt"/>
-                                </connections>
-                            </button>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="r34-bC-Onr">
-                                <rect key="frame" x="20" y="166" width="374" height="128"/>
+                                <rect key="frame" x="20" y="166" width="374" height="305"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                                <mutableString key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</mutableString>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                 <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -208,7 +188,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JYy-qn-0LS">
-                                <rect key="frame" x="187" y="503" width="40" height="30"/>
+                                <rect key="frame" x="187" y="501" width="40" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Share"/>
                                 <connections>
@@ -217,14 +197,6 @@
                             </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <constraints>
-                            <constraint firstItem="EZB-fG-y1o" firstAttribute="leading" secondItem="jdh-r5-ytW" secondAttribute="leading" constant="20" id="4OW-Hv-Y2x"/>
-                            <constraint firstItem="fHf-Uz-g83" firstAttribute="leading" secondItem="jdh-r5-ytW" secondAttribute="leading" constant="20" id="EFP-VJ-Zwh"/>
-                            <constraint firstItem="GyH-g1-gMf" firstAttribute="top" secondItem="fHf-Uz-g83" secondAttribute="bottom" constant="5" id="LVd-dh-Zgs"/>
-                            <constraint firstItem="GyH-g1-gMf" firstAttribute="leading" secondItem="jdh-r5-ytW" secondAttribute="leading" constant="20" id="XBs-K8-V6r"/>
-                            <constraint firstItem="fHf-Uz-g83" firstAttribute="top" secondItem="EZB-fG-y1o" secondAttribute="bottom" constant="8" id="me0-w6-lKx"/>
-                            <constraint firstItem="jdh-r5-ytW" firstAttribute="bottom" secondItem="GyH-g1-gMf" secondAttribute="bottom" constant="102" id="xNe-W2-Ugw"/>
-                        </constraints>
                         <viewLayoutGuide key="safeArea" id="jdh-r5-ytW"/>
                     </view>
                     <connections>
