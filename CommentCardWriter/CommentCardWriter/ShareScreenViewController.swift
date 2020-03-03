@@ -64,5 +64,12 @@ class ShareScreenViewController: UIViewController {
         characterCountLabel.text = String(remaining)
     }
     
+    @IBAction func ShareButton(_ sender: Any) {
+        var texttoshare = resultBox.text
+        var URLtoshare = NSURL(string: "https://google.com")
+        var objectsToShare:NSArray = [texttoshare, URLtoshare!]
+        var activityVC = UIActivityViewController(activityItems: objectsToShare as! [Any], applicationActivities: nil)
+        self.present(activityVC, animated: true, completion: nil)
+    }
     
 }
