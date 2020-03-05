@@ -55,7 +55,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
     }
     
     func getArtists() -> String {
-        guard let url = URL(string: "https://itunes.apple.com/search?term=Lionel%20Richie&entity=musicArtist") else {
+        guard let url = URL(string: "https://itunes.apple.com/search?term=Union%20Square&entity=musicArtist") else {
             print("Invalid URL")
             return "Invalid URL - Wasn't able to search Itunes."
         }
@@ -63,11 +63,32 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
         let request = URLRequest(url: url)
         URLSession.shared.dataTask(with: request) {(data,response,error) in
             if let data = data {
-                print(String(decoding: data, as: UTF8.self))
+                if let  response = self.parseJson(json: data) {
+                    let names = response.results.map {
+                        return $0.artistName
+                    }
+                    
+                    DispatchQueue.main.async {
+                        self.musicRecommendations.text = names.joined(separator: ", ")
+                    }
+
+                }
             }
         }.resume()
         
         return ""
+    }
+    
+    func parseJson(json: Data) -> ArtistResponse? {
+        let decoder = JSONDecoder()
+        
+        if let artistResponse = try? decoder.decode(ArtistResponse.self, from: json) {
+            return artistResponse
+        } else {
+            print("Failed to decode to Artist Response")
+            return nil
+        }
+        
     }
     
     
