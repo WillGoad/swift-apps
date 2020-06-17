@@ -16,7 +16,6 @@
 		9B48EE752490E35000CFE32F /* ReversePolishNotationCalculatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B48EE742490E35000CFE32F /* ReversePolishNotationCalculatorTests.swift */; };
 		9B48EE802490E35000CFE32F /* ReversePolishNotationCalculatorUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B48EE7F2490E35000CFE32F /* ReversePolishNotationCalculatorUITests.swift */; };
 		9B48EE8E2490ED3B00CFE32F /* Stack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B48EE8D2490ED3B00CFE32F /* Stack.swift */; };
-		9B48EE922490F72800CFE32F /* Calculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B48EE912490F72800CFE32F /* Calculator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,7 +51,6 @@
 		9B48EE7F2490E35000CFE32F /* ReversePolishNotationCalculatorUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReversePolishNotationCalculatorUITests.swift; sourceTree = "<group>"; };
 		9B48EE812490E35000CFE32F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9B48EE8D2490ED3B00CFE32F /* Stack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stack.swift; sourceTree = "<group>"; };
-		9B48EE912490F72800CFE32F /* Calculator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Calculator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,7 +109,6 @@
 				9B48EE682490E35000CFE32F /* LaunchScreen.storyboard */,
 				9B48EE6B2490E35000CFE32F /* Info.plist */,
 				9B48EE8D2490ED3B00CFE32F /* Stack.swift */,
-				9B48EE912490F72800CFE32F /* Calculator.swift */,
 			);
 			path = ReversePolishNotationCalculator;
 			sourceTree = "<group>";
@@ -268,7 +265,6 @@
 				9B48EE8E2490ED3B00CFE32F /* Stack.swift in Sources */,
 				9B48EE622490E34D00CFE32F /* ViewController.swift in Sources */,
 				9B48EE5E2490E34D00CFE32F /* AppDelegate.swift in Sources */,
-				9B48EE922490F72800CFE32F /* Calculator.swift in Sources */,
 				9B48EE602490E34D00CFE32F /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
